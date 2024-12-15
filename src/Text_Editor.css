@@ -1,0 +1,58 @@
+/* EditorWithFormatting.css */
+
+.editor-container {
+  margin: 40px auto;
+  font-family: 'Roboto', sans-serif;
+  max-width: 800px;
+  text-align: center;
+}
+
+.editor-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.editor-wrapper {
+  border: 2px solid #e1e5eb;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 350px;
+  background-color: #f9fbfd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.editor-wrapper:focus-within {
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
+}
+
+.editor-save-button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.editor-save-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.editor-save-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
+}
+
+.editor-save-button:active {
+  transform: scale(0.95);
+}
