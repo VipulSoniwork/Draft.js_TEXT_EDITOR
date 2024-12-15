@@ -1,8 +1,23 @@
-# React + Vite
+## Install Dependencies:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```npm install```
 
-Currently, two official plugins are available:
+## Create Vite Config File (vite.config.js):
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import polyfillNode from 'rollup-plugin-polyfill-node';
+
+export default defineConfig({
+  plugins: [react(), polyfillNode()],
+  define: {
+    global: 'globalThis',
+  },
+});
+```
+## Install rollup-plugin-polyfill-node:
+```npm install --save-dev rollup-plugin-polyfill-node```
+
+## Start Development Server:
+
+``` npm run dev ```
